@@ -47,6 +47,7 @@ function add(){
   mostrar()
 }
 
+
 function mostrar () {
   let mensaje = ""
   for (const compra of compras) {
@@ -66,10 +67,10 @@ let mensaje = ""
 for (const compra of compras) {
   mensaje +=`${compra.nombre} - ${compra.cantidad}\n`
 }
-alert(`${mensaje} Total de la orden: ${total}. Envio: ${envioValue}`)
-
+alert(`${mensaje} Subtotal de la orden: ${total}. Envío: ${envioValue} \nTotal: ${total + envioValue}`)
 compras = []
 }
+
 
 function envio(result){
   let envio;
@@ -84,5 +85,3 @@ function envio(result){
 
   return envio
 }
-
-
